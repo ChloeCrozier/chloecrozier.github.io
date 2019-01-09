@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body {
+  text-align: center;
+  background-size: 100vw 160vh;
+  font-size: 17px;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  
+}
+
+.chloe {
+  background-image: url('./images/chloe.jpeg');
+  background-size: 100vw 140vh;
+}
+
+
+.box {
+  width: 540px;
+  border: 3px solid black;
+  margin: 13% auto 0 auto;
+  background-color: white;
+  padding: 10px;
+  opacity: 0.93;
+  border-radius: 8px;
+}
+
+
+.style {
+  border: 2px solid black;
+  padding:13px;
+  margin: 8px;
+}
+
+.top {
+  top: 0;
+  left: 0;
+  background-color: white;
+  border: 3px solid black;
+  width: 100%;
+  line-height: 30px;
+  padding: 20px;
+  position: fixed;
+  text-align: center;
+  opacity: 0.96;
+}
+
+ a {
+  padding: 6px 12px;
+  text-decoration: none;
+  }
+
+.box table {
+  margin: 20px auto;
+  width: 100%;
+}
+
+.top .active, 
+.menu .active{  
+  text-decoration: underline;
+}
+
+
+a:hover{
+  font-weight: bold;
+}
