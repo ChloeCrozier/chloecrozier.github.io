@@ -45,14 +45,21 @@ body {
 }
 
 .chloe {
-  background-image: url('./images/chloeb.jpg');
-  background-size: 100vw 140vh;
-}
+  background-image: url('./images/mountainfield.jpg');
+  }
+
+  .khan {
+    background-image: url('./images/dock.jpg');
+    }
+
+  .jsfiddle {
+    background-image: url('./images/aurora.jpg');
+    }
 
 
 .box {
   width: 540px;
-  border: 3px solid black;
+  border: 2px solid black;
   margin: 13% auto 0 auto;
   background-color: white;
   padding: 10px;
@@ -98,4 +105,17 @@ body {
 
 a:hover{
   font-weight: bold;
+}
+
+.bottom {
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  border: 1px solid black;
+  width: 100%;
+  line-height: 3px;
+  padding: 10px;
+  position: fixed;
+  text-align: left;
+  opacity: 0.96;
 }
