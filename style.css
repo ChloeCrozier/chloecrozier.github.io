@@ -9,6 +9,41 @@ body {
   
 }
 
+.giga {
+  background-image: url('./images/rollercoasters/home.jpg');
+}
+
+.fury {
+  background-image: url('./images/rollercoasters/fury.jpg');
+}
+
+.intimidator {
+  background-image: url('./images/rollercoasters/intimidator.jpg');
+}
+
+.steeldragon {
+  background-image: url('./images/rollercoasters/steel-dragon.jpg');
+}
+
+.leviathan {
+  background-image: url('./images/rollercoasters/leviathan.jpg');
+}
+.millenniumforce {
+  background-image: url('./images/rollercoasters/millenniumforce.jpg');
+}
+
+.strata {
+  background-image: url('./images/rollercoasters/strata.jpg');
+}
+
+.thrill {
+  background-image: url('./images/rollercoasters/thrill.jpg');
+}
+
+.ka {
+  background-image: url('./images/rollercoasters/king.jpg');
+}
+
 .chloe {
   background-image: url('./images/chloeb.jpg');
   background-size: 100vw 140vh;
