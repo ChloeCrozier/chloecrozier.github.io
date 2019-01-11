@@ -193,6 +193,46 @@ a:hover{
   top: -40px;
 }
 
+.jupiterorbit{
+  position: absolute;
+  width: 1400px;
+  height: 1200px;
+  border-radius: 50%;
+  left: 70px;
+  border: 1px solid white;
+  top: 100px;
+}
+/* 
+.saturnorbit{
+  position: absolute;
+  width: 800px;
+  height: 720px;
+  border-radius: 50%;
+  border: 1px solid white;
+  left: -357px;
+  top: 50px;
+}
+
+.uranusorbit{
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 1px solid white;
+  left: 370px;
+  top: 360px;
+}
+
+.neptuneorbit{
+  position: absolute;
+  width: 930px;
+  height: 890px;
+  border-radius: 50%;
+  border: 1px solid white;
+  left: -327px;
+  top: -40px;
+} */
+
 .sun{
   transition: all 300ms;
   position: absolute;
@@ -200,7 +240,6 @@ a:hover{
   width: 405px;
   height: 405px;
   border-radius: 50%;
-  border: 2px solid black;
   left: -290px;
   top: 203px;
 }
@@ -280,32 +319,32 @@ a:hover{
 
 .jupiter{
   background-image: url('./images/planets/jupiter.png');
-  width: 90px;
-  height: 90px;
-  left: 260px;
-  top: 380px;
+  width: 220px;
+  height: 220px;
+  left: 725px;
+  top: 310px;
 }
 
 .saturn {
   background-image: url('./images/planets/saturn.png');
-  width: 99px;
-  height: 99px;
-  left: 392px;
-  top: 380px;
+  width: 160px;
+  height: 160px;
+  left: 1000px;
+  top: 340px;
 }
 
 .uranus {
   background-image: url('./images/planets/uranus.png');
-  width: 27px;
-  height: 27px;
-  left: 460px;
-  top: 352px; 
+  width: 120px;
+  height: 120px;
+  left: 1415px;
+  top: 360px; 
 }
 
 .neptune {
   background-image: url('./images/planets/neptune.png');
-  width: 77px;
-  height: 77px;
-  left: 560px;
-  top: 392px;
+  width: 130px;
+  height: 130px;
+  left: 1220px;
+  top: 360px;
 }
