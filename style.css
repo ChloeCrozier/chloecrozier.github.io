@@ -52,7 +52,7 @@ body {
   background-image: url('./images/dock.jpg');
 }
 
-.planet {
+.planetarium {
   /* background-image: url('./images/space.jpg'); */
   background: #000;
 }
@@ -71,7 +71,7 @@ body {
   border-radius: 8px;
   }
 
-.planetarium {
+.info {
   text-align: center;
   width: 450px;
   line-height: 10px;
@@ -116,16 +116,12 @@ a:hover{
   font-weight: bold;
 }
 
-.sun:hover,
-.mercury:hover,
-.venus:hover,
-.earth:hover,
-.moon:hover,
-.mars:hover,
-.jupiter:hover,
-.saturn:hover,
-.uranus:hover,
-.neptune:hover{
+.planet {
+  transition: all 300ms;
+  position: absolute;
+  background-size: 100%;
+}
+.planet:hover{
   transform: scale(1.1);
 }
 
@@ -145,18 +141,6 @@ a:hover{
 .list, 
 .menu {
   list-style: none;
-}
-
-.sun{
-  transition: all 300ms;
-  position: absolute;
-  background: #FFB601;
-  width: 405px;
-  height: 405px;
-  border-radius: 50%;
-  border: 2px solid black;
-  left: -260px;
-  top: 203px;
 }
 
 .mercuryorbit{
@@ -209,62 +193,119 @@ a:hover{
   top: -40px;
 }
 
-.mercury{
+.sun{
   transition: all 300ms;
   position: absolute;
-  background: rgb(155, 147, 147);
-  width: 40px;
-  height: 40px;
+  background-image: url('./images/planets/sun.png');
+  width: 405px;
+  height: 405px;
   border-radius: 50%;
   border: 2px solid black;
+  left: -290px;
+  top: 203px;
+}
+
+.mercury{
+  background-image: url('./images/planets/mercury.png');
+  width: 40px;
+  height: 40px;
   left: 187px;
   top: 408px;
 }
 
 .venus{
-  transition: all 300ms;
-  position: absolute;
-  background: rgb(226, 112, 45);
+  background-image: url('./images/planets/venus.png');
   width: 90px;
   height: 90px;
-  border-radius: 50%;
-  border: 2px solid black;
   left: 260px;
   top: 380px;
 }
 
-.earth{
-  transition: all 300ms;
-  position: absolute;
-  background: rgb(55, 128, 212);
+.earth {
+  background-image: url('./images/planets/earth.png');
   width: 99px;
   height: 99px;
-  border-radius: 50%;
-  border: 2px solid black;
-  left: 390px;
+  left: 392px;
   top: 380px;
 }
 
-.moon{
-  transition: all 300ms;
-  position: absolute;
-  background: grey;
+.moon {
+  background-image: url('./images/planets/moon.png');
   width: 27px;
   height: 27px;
-  border-radius: 50%;
-  border: 2px solid black;
   left: 460px;
   top: 352px; 
 }
 
-.mars{
-  transition: all 300ms;
-  position: absolute;
-  background: rgb(212, 60, 40);
+.mars {
+  background-image: url('./images/planets/mars.png');
   width: 77px;
   height: 77px;
-  border-radius: 50%;
-  border: 2px solid black;
+  left: 560px;
+  top: 392px;
+}
+
+
+.venus{
+  background-image: url('./images/planets/venus.png');
+  width: 90px;
+  height: 90px;
+  left: 260px;
+  top: 380px;
+}
+
+.earth {
+  background-image: url('./images/planets/earth.png');
+  width: 99px;
+  height: 99px;
+  left: 392px;
+  top: 380px;
+}
+
+.moon {
+  background-image: url('./images/planets/moon.png');
+  width: 27px;
+  height: 27px;
+  left: 460px;
+  top: 352px; 
+}
+
+.mars {
+  background-image: url('./images/planets/mars.png');
+  width: 77px;
+  height: 77px;
+  left: 560px;
+  top: 392px;
+}
+
+.jupiter{
+  background-image: url('./images/planets/jupiter.png');
+  width: 90px;
+  height: 90px;
+  left: 260px;
+  top: 380px;
+}
+
+.saturn {
+  background-image: url('./images/planets/saturn.png');
+  width: 99px;
+  height: 99px;
+  left: 392px;
+  top: 380px;
+}
+
+.uranus {
+  background-image: url('./images/planets/uranus.png');
+  width: 27px;
+  height: 27px;
+  left: 460px;
+  top: 352px; 
+}
+
+.neptune {
+  background-image: url('./images/planets/neptune.png');
+  width: 77px;
+  height: 77px;
   left: 560px;
   top: 392px;
 }
