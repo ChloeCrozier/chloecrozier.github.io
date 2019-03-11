@@ -45,7 +45,7 @@ body {
 }
 
 .chloe {
-  background-image: url('./images/watermountain.jpg');
+  background-image: url('./images/water.jpg');
 }
 
 .khan {
@@ -53,16 +53,35 @@ body {
 }
 
 .planetarium {
-  /* background-image: url('./images/space.jpg'); */
   background: rgb(4, 2, 14);
 }
 
 .jsfiddle {
-  background-image: url('./images/water.jpg');
+  background-image: url('./images/watermountain.jpg');
 }
 
+.games {
+  background-image: url('./images/palm.jpg');
+}
+
+.pick {
+  background: white;
+}
+
+.date {  
+  background-image: url(./images/dirt.jpg );        
+  transition: all 1500ms;
+  
+ }
+
+ .date:hover {      
+  background-image: url(./images/date-water.jpg );
+ }
+
 .box {
-  width: 540px;
+  position: relative;
+  z-index: 1;
+  width: 37%;
   border: 2px solid black;
   margin: 13% auto 0 auto;
   background-color: white;
@@ -122,10 +141,10 @@ a:hover{
   background-size: 100%;
 }
 .planet:hover{
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 
-.bottom {
+.bottom {  
   bottom: 0;
   left: 0;
   background-color: white;
@@ -315,3 +334,47 @@ a:hover{
   left: 1440px;
   top: 360px; 
 }
+
+.shape{
+  position: absolute;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background: blue;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  border-radius: 50%;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+
+
+.design {  
+  background-image: url(./images/water.jpg );        
+  transition: all 1500ms;
+  
+ }
+
+ .design:hover {      
+  background-image: url(./images/dirt.jpg );
+ }
+
+ .design-link{
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+ }
