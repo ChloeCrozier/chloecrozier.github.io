@@ -1,28 +1,45 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-	<head>
-		<title> Chloe Crozier </title>
-    	<link rel="stylesheet" href="./style.css"/>
-    	<link href="./images/favicon.ico" rel="icon" type="image/ico">
-	</head>
-	<body class="chloe">
-		<div class="box">
-			<h1>Coronavirus Statistics</h1>
-			<table style="width:100%" border="width:1px"> 
-				<tr>
-					<th>blank</th><th>blank</th><th>blank</th>
-				</tr>
-				<tr>
-					<td>blank</td><td>blank</td><td>blank</td>
-				</tr>
-				<tr>
-					<td>blank</td><td>blank</td><td>blank</td>
-				</tr>
-			</table>
-		</div>
+  <head>
+    <title>COVID-19 Dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="./images/favicon.ico" rel="icon" type="image/ico" />
+  </head>
+  <body class="chloe">
+    <div class="box">
+      <h2>COVID-19 Dashboard</h2>
 
-	<div class="bottom">
- 		 <a href="./index.html">ChloeCrozier.com</a>
-	</div>
-	</body>
+      <table>
+        <tr>
+          <th></th>
+          <th>Confirmed Cases</th>
+          <th>Mortality Rate</th>
+          <th>Recovery Rate</th>
+        </tr>
+        <tr>
+          <td>Global</td>
+          <td global-fill="TotalConfirmed"></td>
+          <td global-fill="TotalDeaths"></td>
+          <td global-fill="TotalRecovered"></td>
+        </tr>
+        <tr>
+          <td>United Sates</td>
+          <td country-fill="TotalConfirmed"></td>
+          <td country-fill="TotalDeaths"></td>
+          <td country-fill="TotalRecovered"></td>
+        </tr>
+        <!-- <tr>
+          <td>State</d>
+          <td global-fill="TotalConfirmed"></td>
+          <td global-fill="TotalDeaths"></td>
+          <td global-fill="TotalRecovered"></td>
+        </tr> -->
+      </table>
+    </div>
+
+    <div class="bottom">
+      <a href="./index.html">ChloeCrozier.com</a>
+    </div>
+    <script src="./coronavirus.js"></script>
+  </body>
 </html>
