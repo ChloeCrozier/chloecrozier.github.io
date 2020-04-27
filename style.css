@@ -17,6 +17,10 @@ body {
   background-image: url("./images/water.jpg");
 }
 
+.globe {
+  background-image: url("./images/globe.jpg");
+}
+
 .date {
   background-image: url(./images/dirt.jpg);
   transition: all 1500ms;
@@ -29,13 +33,13 @@ body {
 .box {
   position: relative;
   z-index: 1;
-  width: 45%;
-  border: 2px solid black;
-  margin: 2% auto 0 auto;
+  width: 40%;
+  border: 1px solid black;
+  margin: 7% auto 0 auto;
   background-color: white;
   padding: 1%;
-  opacity: 0.85;
-  border-radius: 9px;
+  opacity: 0.89;
+  border-radius: 10px;
 }
 
 a {
@@ -59,10 +63,10 @@ a:hover {
   border: 1px solid black;
   width: 100%;
   line-height: 12px;
-  padding: 10px;
+  padding: 12px;
   position: fixed;
   text-align: left;
-  opacity: 0.96;
+  opacity: 0.89;
 }
 
 .list,
@@ -94,12 +98,54 @@ table {
 }
 th,
 td {
-  border: 1px solid;
-  padding: 10px;
+  border: 1.5px solid;
+  padding: 8px;
 }
 tr:first-of-type th:first-of-type {
   border: none;
 }
 tr td:first-of-type {
   font-weight: bold;
+}
+
+td:hover,
+th:hover {
+  font-weight: bold;
+}
+
+.circleA,
+.circleB,
+.circleC {
+  margin: 0 auto;
+  border-radius: 50%;
+  height: 9px;
+  width: 9px;
+  display: inline-block;
+  vertical-align: middle;
+  animation-name: colorChange;
+  animation-iteration-count: infinite;
+}
+
+.circleA {
+  animation-duration: 1s;
+}
+.circleB {
+  animation-duration: 1s;
+  animation-delay: 0.25s;
+}
+.circleC {
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+@keyframes colorChange {
+  from {
+    background-color: black;
+  }
+  to {
+    background-color: grey;
+  }
+  to {
+    background-color: #e8e8e8;
+  }
 }

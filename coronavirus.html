@@ -2,10 +2,10 @@
 <html>
   <head>
     <title>COVID-19 Dashboard</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style.css?v=999" />
     <link href="./images/favicon.ico" rel="icon" type="image/ico" />
   </head>
-  <body class="chloe">
+  <body class="globe">
     <div class="box">
       <h2>COVID-19 Dashboard</h2>
 
@@ -18,27 +18,33 @@
         </tr>
         <tr>
           <td>Global</td>
-          <td global-fill="TotalConfirmed"></td>
-          <td global-fill="TotalDeaths"></td>
-          <td global-fill="TotalRecovered"></td>
+          <td data-fill="Global_TotalConfirmed"></td>
+          <td data-fill="Global_TotalDeaths"></td>
+          <td data-fill="Global_TotalRecovered"></td>
         </tr>
         <tr>
-          <td>United Sates</td>
-          <td country-fill="TotalConfirmed"></td>
-          <td country-fill="TotalDeaths"></td>
-          <td country-fill="TotalRecovered"></td>
+          <td>United States</td>
+          <td data-fill="US_TotalConfirmed"></td>
+          <td data-fill="US_TotalDeaths"></td>
+          <td data-fill="US_TotalRecovered"></td>
         </tr>
-        <!-- <tr>
-          <td>State</d>
-          <td global-fill="TotalConfirmed"></td>
-          <td global-fill="TotalDeaths"></td>
-          <td global-fill="TotalRecovered"></td>
-        </tr> -->
+        <tr>
+          <td>
+            <select id="states">
+              <option disabled selected> Select a State</option>
+            </select>
+            <slection id="state-select"></slection>
+          </td>
+          <td data-fill="States_Confirmed"></td>
+          <td data-fill="States_Deaths"></td>
+          <td data-fill="States_Recovered"></td>
+        </tr>
       </table>
     </div>
 
     <div class="bottom">
       <a href="./index.html">ChloeCrozier.com</a>
+      API Source: covid19api.com
     </div>
     <script src="./coronavirus.js"></script>
   </body>
