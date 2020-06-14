@@ -17,10 +17,6 @@ body {
   background-image: url("./images/water.jpg");
 }
 
-.globe {
-  background-image: url("./images/globe.jpg");
-}
-
 .date {
   background-image: url(./images/dirt.jpg);
   transition: all 1500ms;
@@ -90,62 +86,4 @@ a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-}
-
-table {
-  border-collapse: collapse;
-  margin: 0 auto;
-}
-th,
-td {
-  border: 1.5px solid;
-  padding: 8px;
-}
-tr:first-of-type th:first-of-type {
-  border: none;
-}
-tr td:first-of-type {
-  font-weight: bold;
-}
-
-td:hover,
-th:hover {
-  font-weight: bold;
-}
-
-.circleA,
-.circleB,
-.circleC {
-  margin: 0 auto;
-  border-radius: 50%;
-  height: 9px;
-  width: 9px;
-  display: inline-block;
-  vertical-align: middle;
-  animation-name: colorChange;
-  animation-iteration-count: infinite;
-}
-
-.circleA {
-  animation-duration: 1s;
-}
-.circleB {
-  animation-duration: 1s;
-  animation-delay: 0.25s;
-}
-.circleC {
-  animation-duration: 1s;
-  animation-delay: 0.5s;
-}
-
-@keyframes colorChange {
-  from {
-    background-color: black;
-  }
-  to {
-    background-color: grey;
-  }
-  to {
-    background-color: #e8e8e8;
-  }
 }

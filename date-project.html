@@ -1,43 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>School Web Design Portfolio</title>
+  <head>
+    <title>Today's Date</title>
 
-  <link rel="stylesheet" href="./style.css"/>
-  <link href="./images/favicon.ico" rel="icon" type="image/ico">
+    <link rel="stylesheet" href="./style.css" />
+    <link href="./images/favicon.ico" rel="icon" type="image/ico" />
 
-  <script type="text/javascript">  
-    function delayer(){window.location = "/"}   
-  </script> 
+    <script type="text/javascript">
+      function delayer() {
+        window.location = "/";
+      }
+    </script>
+  </head>
 
-</head>
+  <body onLoad="setTimeout('delayer()', 30000)" class="date">
+    <div class="box">
+      <p>
+        Today's date is:
 
-<body onLoad="setTimeout('delayer()', 30000)" class="date">
+        <script language="javascript" type="text/javascript">
+          Today = new Date();
 
-    <div class="box" >
+          document.write(Today);
+        </script>
+      </p>
 
-     <p>Today's date is:
+      <p>
+        You are going to be redirected in 30 seconds!
+      </p>
+    </div>
+    <!-- <a class="date-link" href="https://ChloeCrozier.com"></a> -->
 
-      <script language="javascript" type="text/javascript">
-
-      Today=new Date()
-
-      document.write(Today);
-
-      </script>
-
-    </p>
-
-    <p>
-      You are going to be redirected in 30 seconds!
-  </p>  
-</div>
-  <!-- <a class="date-link" href="https://ChloeCrozier.com"></a> -->
-
-
-<div class="bottom">
-  <a href="./index.html">ChloeCrozier.com</a>
-</div>
-
-</body>
+    <div class="bottom">
+      <a href="./index.html">ChloeCrozier.com</a>
+    </div>
+  </body>
 </html>
