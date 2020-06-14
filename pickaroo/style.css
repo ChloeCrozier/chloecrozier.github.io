@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+
+body {
+  text-align: center;
+  background-size: 100vw 160vh;
+  font-size: 18px;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+a {
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+.bottom {
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  border: 1px solid black;
+  width: 100%;
+  line-height: 12px;
+  padding: 12px;
+  position: fixed;
+  text-align: left;
+  opacity: 0.89;
+}
+
+.end-game .timer-board,
+.end-game .score-board,
+.end-game .description {
+  display: none;
+}
+.score-board,
+.timer-board {
+  text-align: right;
+  padding-right: 35px;
+}
+
+.game-over {
+  font-size: 35px;
+  text-align: center;
+  flex-basis: 100%;
+}
+.game-over.negative {
+  color: red;
+}
+.game-over.positive {
+  color: green;
+}
+
+.restart-button {
+  font-size: 20px;
+  text-align: center;
+  margin: auto;
+}
+
+.game-space {
+  padding-top: 2%;
+  margin: auto;
+  max-width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.status {
+  font-size: 35px;
+  text-align: center;
+  flex-basis: 100%;
+}
+
+.status.correct {
+  color: green;
+}
+
+.status.incorrect {
+  color: red;
+}
+
+.shape {
+  transition: 200ms all;
+  cursor: pointer;
+  margin: 15px;
+}
+.shape:hover {
+  opacity: 0.8;
+  transform: scale(1.15);
+}
+
+[data-shape="square"] {
+  height: 100px;
+  width: 100px;
+}
+
+[data-shape="circle"] {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+[data-shape="triangle-up"] {
+  height: 0;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid black;
+}
+[data-shape="triangle-down"] {
+  height: 0;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid black;
+}
