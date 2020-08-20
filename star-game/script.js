@@ -7,6 +7,7 @@ var GameScene = new Phaser.Class({
     this.player = null;
     this.cursors = null;
     this.score = 0;
+    this.clock = 20 * 1000;
     this.scoreText = null;
   },
 
@@ -28,6 +29,14 @@ var GameScene = new Phaser.Class({
   create: function() {
     this.add.image(400, 300, "sky");
 
+    this.cameras.main.setBounds(0, 0, 1024, 2048);
+
+    // this.add.image(0, 0, "map").setOrigin(0);
+
+    // this.cameras.main.setZoom(4);
+    // this.cameras.main.centerOn(0, 0);
+    // game.camera.follow(player);
+
     var platforms = this.physics.add.staticGroup();
 
     platforms
@@ -42,7 +51,7 @@ var GameScene = new Phaser.Class({
     var player = this.physics.add.sprite(100, 450, "dude");
 
     player.setBounce(0.2);
-    player.setCollideWorldBounds(true);
+    player.setCollideWorldBounds(false);
 
     this.anims.create({
       key: "left",
@@ -76,7 +85,12 @@ var GameScene = new Phaser.Class({
       child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
     });
 
-    this.scoreText = this.add.text(16, 16, "score: 0", {
+    this.scoreText = this.add.text(16, 45, "score: 0", {
+      fontSize: "32px",
+      fill: "#000"
+    });
+
+    this.clockText = this.add.text(16, 16, "time: 2000", {
       fontSize: "32px",
       fill: "#000"
     });
@@ -129,17 +143,20 @@ var GameScene = new Phaser.Class({
   },
 
   update: function() {
+    this.clock -= 10;
+    this.clockText.setText("Time: " + this.clock / 1000);
+
     var cursors = this.cursors;
     var player = this.player;
 
     if (cursors.left.isDown) {
       player.setVelocityX(-160);
 
-      player.anims.play("right", true);
+      player.anims.play("left", true);
     } else if (cursors.right.isDown) {
       player.setVelocityX(160);
 
-      player.anims.play("left", true);
+      player.anims.play("right", true);
     } else {
       player.setVelocityX(0);
 

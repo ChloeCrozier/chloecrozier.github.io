@@ -6,22 +6,23 @@ const APP_DATA = { states: null, global: null };
 
 // Fetch data
 fetch("https://api.covid19api.com/live/country/united-states")
-  .then(response => response.json())
-  .then(result => {
+  .then((response) => response.json())
+  .then((result) => {
     APP_DATA.states = result;
     const stateNames = Array.from(
-      new Set(result.map(entry => entry.Province))
+      new Set(result.map((entry) => entry.Province))
     ).sort();
 
     stateSelectElement.innerHTML += stateNames
-      .map(state => `<option value="${state}">${state}</option>`)
+      .map((state) => `<option value="${state}">${state}</option>`)
       .join("");
 
-    stateSelectElement.addEventListener("change", event => {
+    stateSelectElement.addEventListener("change", (event) => {
       const selectedState = event.target.value;
       const stateData = APP_DATA.states.find(
-        entry => entry.Province === selectedState
+        (entry) => entry.Province === selectedState
       );
+      console.log(selectedState);
 
       for (field in stateData) {
         const target = document.querySelector(`[data-fill="States_${field}"]`);
@@ -39,8 +40,8 @@ fetch("https://api.covid19api.com/live/country/united-states")
   });
 
 fetch("https://api.covid19api.com/summary")
-  .then(response => response.json())
-  .then(result => {
+  .then((response) => response.json())
+  .then((result) => {
     APP_DATA.global = result;
 
     for (field in result.Global) {
@@ -53,10 +54,10 @@ fetch("https://api.covid19api.com/summary")
     }
 
     const unitedStates = result.Countries.find(
-      country => country.CountryCode === "US"
+      (country) => country.CountryCode === "US"
     );
 
-    ["TotalConfirmed", "TotalDeaths", "TotalRecovered"].forEach(key => {
+    ["TotalConfirmed", "TotalDeaths", "TotalRecovered"].forEach((key) => {
       const target = document.querySelector(`[data-fill="US_${key}"]`);
       if (target) {
         const value = unitedStates[key];
@@ -68,7 +69,7 @@ fetch("https://api.covid19api.com/summary")
 
 // Add loader for each table data element
 const tableDataElements = document.querySelectorAll(`[data-fill]`);
-Array.from(tableDataElements).forEach(element => {
+Array.from(tableDataElements).forEach((element) => {
   element.innerHTML = `<div class="loader">
     <div class="circleA"></div>
     <div class="circleB"></div>

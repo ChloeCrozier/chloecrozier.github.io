@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pick-A-Roo</title>
+    <title>Dog Breed Fetcher</title>
     <link rel="stylesheet" href="./style.css" />
     <link href="./../images/favicon.ico" rel="icon" type="image/ico" />
   </head>
   <body>
-    <h4 class="timer-board">Time: <span class="time">5</span> seconds</h4>
-    <h4 class="score-board">Score: <span class="score">0</span></h4>
-    <p><span class="description"></span></p>
-    <div class="game-space"></div>
+    <select id="breeds">
+      <option disabled selected>Select a Breed</option>
+    </select>
+    <selection id="breed-select"></selection>
+    <div id="dog-image"></div>
     <div class="bottom">
       <a href="./../index.html">ChloeCrozier.com</a>
     </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
