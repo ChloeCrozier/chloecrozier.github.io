@@ -9,21 +9,8 @@ body {
   overflow: hidden;
 }
 
-.verse-background {
-  background-image: url("./images/dirt.jpg");
-}
-
 .chloe {
   background-image: url("./images/water.jpg");
-}
-
-.date {
-  background-image: url(./images/dirt.jpg);
-  transition: all 1500ms;
-}
-
-.date:hover {
-  background-image: url(./images/date-water.jpg);
 }
 
 .box {
@@ -69,15 +56,6 @@ a:hover {
 .menu {
   padding: 0;
   list-style: none;
-}
-
-.design {
-  background-image: url(./images/water.jpg);
-  transition: all 1500ms;
-}
-
-.design:hover {
-  background-image: url(./images/dirt.jpg);
 }
 
 .design-link {
