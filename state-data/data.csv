@@ -1,53 +1,53 @@
-State	Emissions
-Alabama	0
-Alaska	0
-Arizona	0
-Arkansas	0
-California	0
-Colorado	0
-Connecticut	0
-Delaware	0
-District of Columbia	0
-Florida	0
-Georgia	0
-Hawaii	0
-Idaho	0
-Illinois	0
-Indiana	0
-Iowa	0
-Kansas	0
-Kentucky	0
-Louisiana	0
-Maine	0
-Maryland	0
-Massachusetts	0
-Michigan	0
-Minnesota	0
-Mississippi	0
-Missouri	0
-Montana	0
-Nebraska	0
-Nevada	0
-New Hampshire	0
-New Jersey	0
-New Mexico	0
-New York	0
-North Carolina	0
-North Dakota	0
-Ohio	0
-Oklahoma	0
-Oregon	0
-Pennsylvania	0
-Rhode Island	0
-South Carolina	0
-South Dakota	0
-Tennessee	0
-Texas	0
-Utah	0
-Vermont	0
-Virginia	0
-Washington	0
-West Virginia	0
-Wisconsin	0
-Wyoming	0
-Puerto Rico	0
+State	Population	Emissions	EmissionsPerCapita
+Alabama	4,779,736	112.9	23.2
+Alaska	710,231	35	47.6
+Arizona	6,392,017	93.6	13.1
+Arkansas	2,915,918	70.9	23.6
+California	37,253,956	355.5	9
+Colorado	5,029,196	90.3	15.9
+Connecticut	3,574,097	37.5	10.5
+Delaware	897,934	13.3	13.8
+District of Columbia	601,723	2.9	4.1
+Florida	18,801,310	242.5	11.4
+Georgia	9,687,653	142.4	13.6
+Hawaii	1,360,301	20.5	14.4
+Idaho	1,567,582	18.9	10.8
+Illinois	12,830,632	211.5	16.7
+Indiana	6,483,802	188.3	28.2
+Iowa	3,046,355	82.6	26.3
+Kansas	2,853,118	62.1	21.4
+Kentucky	4,339,367	120.8	27.1
+Louisiana	4,533,372	198.7	42.7
+Maine	1,328,361	14.7	11
+Maryland	5,773,552	61.5	10.2
+Massachusetts	6,547,629	64.4	9.4
+Michigan	9,883,640	163.6	16.4
+Minnesota	5,303,925	94.9	17
+Mississippi	2,967,297	63.2	21.2
+Missouri	5,988,927	124.3	20.4
+Montana	989,415	30.7	29
+Nebraska	1,826,341	52.3	27.2
+Nevada	2,700,551	40.9	13.5
+New Hampshire	1,316,470	14.2	10.5
+New Jersey	8,791,894	105.1	11.9
+New Mexico	2,059,179	45.2	21.7
+New York	19,378,102	175.4	9
+North Carolina	9,535,483	124.4	12
+North Dakota	672,591	58.9	77.7
+Ohio	11,536,504	208.5	17.9
+Oklahoma	3,751,351	97.4	24.8
+Oregon	3,831,074	39.7	9.5
+Pennsylvania	12,702,379	219.8	17.2
+Rhode Island	1,052,567	11.1	10.5
+South Carolina	4,625,364	73.2	14.4
+South Dakota	814,180	15.5	17.7
+Tennessee	6,346,105	94.4	14
+Texas	25,145,561	681.9	23.9
+Utah	2,763,885	60.9	19.4
+Vermont	625,741	5.8	9.4
+Virginia	8,001,024	107.4	12.7
+Washington	6,724,540	76.7	10.2
+West Virginia	1,852,994	89.7	49.8
+Wisconsin	5,686,986	101.7	17.6
+Wyoming	563,626	63.4	109.9
+Puerto Rico	3,725,789	0	0

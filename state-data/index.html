@@ -24,9 +24,9 @@
 		}
 	</style>
 
-	<style>#map { width: 800px; height: 500px; }
+	<style>#map { width: 100%; height: 100%; }
 .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
-.legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }</style>
+.legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 10px; height: 18px; float: left; margin-right: 8px; opacity: 0.6; }</style>
 </head>
 <body>
 
@@ -56,109 +56,111 @@ fetch("./data.json").then(response => response.json()).then(statesData => {
 	};
 
 	info.update = function (props) {
-		this._div.innerHTML = '<h4>US State Emissions</h4>' +  (props ?
-			'<b>' + props.name + '</b><br />' + props.emissions + " Emissions"
+        const status = "";
+		this._div.innerHTML = '<h4>US State Emissions</h4>' + 
+       // '<select> <option value="emissions">Emissions</option></select>' + '</b><br />'  + 
+         (props ?
+			'<b>' + props.name + '</b><br />' + props.emissions + " Million Metric Tons (CO2e)"
 			: 'Hover over a state');
 	};
 
-	info.addTo(map);
+    info.addTo(map);
+
+        // get color depending on state emission values
+        function getColor(e) {
+            return e > 500  ? '#BD0026' :
+                    e > 200  ? '#E31A1C' :
+                    e > 100  ? '#FC4E2A' :
+                    e > 50   ? '#FD8D3C' :
+                    e > 20   ? '#FEB24C' :
+                    e > 10   ? '#FED976' :
+                                '#FFEDA0';
+        }
+
+        function style(feature) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7,
+                fillColor: getColor(feature.properties.emissions)
+            };
+        }
+
+        function highlightFeature(e) {
+            var layer = e.target;
+
+            layer.setStyle({
+                weight: 5,
+                color: '#666',
+                dashArray: '',
+                fillOpacity: 0.7
+            });
+
+            if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+                layer.bringToFront();
+            }
+
+            info.update(layer.feature.properties);
+        }
+
+        var geojson;
+
+        function resetHighlight(e) {
+            geojson.resetStyle(e.target);
+            info.update();
+        }
+
+        function zoomToFeature(e) {
+            map.fitBounds(e.target.getBounds());
+        }
+
+        function onEachFeature(feature, layer) {
+            layer.on({
+                mouseover: highlightFeature,
+                mouseout: resetHighlight,
+                click: zoomToFeature
+            });
+        }
+
+        geojson = L.geoJson(statesData, {
+            style: style,
+            onEachFeature: onEachFeature
+        }).addTo(map);
+
+        map.attributionControl.addAttribution('Emission data &copy; <a href="https://www.eia.gov">US Energy Information Association</a>');
 
 
-	// get color depending on state emission values
-	function getColor(e) {
-		return e > 1000 ? '#800026' :
-				e > 500  ? '#BD0026' :
-				e > 200  ? '#E31A1C' :
-				e > 100  ? '#FC4E2A' :
-				e > 50   ? '#FD8D3C' :
-				e > 20   ? '#FEB24C' :
-				e > 10   ? '#FED976' :
-							'#FFEDA0';
-	}
+        var legend = L.control({position: 'bottomright'});
 
-	function style(feature) {
-		return {
-			weight: 2,
-			opacity: 1,
-			color: 'white',
-			dashArray: '3',
-			fillOpacity: 0.7,
-			fillColor: getColor(feature.properties.emissions)
-		};
-	}
+        legend.onAdd = function (map) {
 
-	function highlightFeature(e) {
-		var layer = e.target;
+            var div = L.DomUtil.create('div', 'info legend'),
+                grades = [0, 10, 20, 50, 100, 200, 500],
+                labels = [],
+                from, to;
 
-		layer.setStyle({
-			weight: 5,
-			color: '#666',
-			dashArray: '',
-			fillOpacity: 0.7
-		});
+            for (var i = 0; i < grades.length; i++) {
+                from = grades[i];
+                to = grades[i + 1];
 
-		if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-			layer.bringToFront();
-		}
+                labels.push(
+                    '<i style="background:' + getColor(from + 1) + '"></i> ' +
+                    from + (to ? '&ndash;' + to : '+'));
+            }
 
-		info.update(layer.feature.properties);
-	}
+            div.innerHTML = labels.join('<br>');
+            return div;
+        };
 
-	var geojson;
-
-	function resetHighlight(e) {
-		geojson.resetStyle(e.target);
-		info.update();
-	}
-
-	function zoomToFeature(e) {
-		map.fitBounds(e.target.getBounds());
-	}
-
-	function onEachFeature(feature, layer) {
-		layer.on({
-			mouseover: highlightFeature,
-			mouseout: resetHighlight,
-			click: zoomToFeature
-		});
-	}
-
-	geojson = L.geoJson(statesData, {
-		style: style,
-		onEachFeature: onEachFeature
-	}).addTo(map);
-
-	map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
-
-
-	var legend = L.control({position: 'bottomright'});
-
-	legend.onAdd = function (map) {
-
-		var div = L.DomUtil.create('div', 'info legend'),
-			grades = [0, 10, 20, 50, 100, 200, 500, 1000],
-			labels = [],
-			from, to;
-
-		for (var i = 0; i < grades.length; i++) {
-			from = grades[i];
-			to = grades[i + 1];
-
-			labels.push(
-				'<i style="background:' + getColor(from + 1) + '"></i> ' +
-				from + (to ? '&ndash;' + to : '+'));
-		}
-
-		div.innerHTML = labels.join('<br>');
-		return div;
-	};
-
-	legend.addTo(map);
+        legend.addTo(map);
 });
 
 </script>
 
-
-
+<div style="z-index:10; bottom: 0; left: 0; background-color: white;border: 1px solid black; width: 100%; line-height: 12px; padding: 12px; position: fixed; text-align: left; opacity: 0.89;">
+    <a href="./../index.html">ChloeCrozier.com</a>
+</div>
 </body>
 </html>

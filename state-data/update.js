@@ -25,5 +25,5 @@ fs.createReadStream('data.csv')
       feature.properties = data[name];
     });
     
-    fs.writeFileSync('./data.json', JSON.stringify(geojson, null, 4));    
+    fs.writeFileSync('./data.json', JSON.stringify(geojson, null, 2));    
   });
