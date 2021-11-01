@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+    <link href="./../images/favicon.ico" rel="icon" type="image/ico" />	
 	<title>State Emissions</title>
+
+    <div style="bottom: 0; left: 0; background-color: white; width: 100%; height: 2%; padding: 10px; position: fixed; text-align: left; opacity: 0.89;">
+        <a href="./../index.html">ChloeCrozier.com</a>
+    </div>
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +28,7 @@
 		}
 	</style>
 
-	<style>#map { width: 100%; height: 100%; }
+	<style>#map { width: 100%; height: 96%; }
 .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
 .legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 10px; height: 18px; float: left; margin-right: 8px; opacity: 0.6; }</style>
 </head>
@@ -56,15 +60,21 @@ fetch("./data.json").then(response => response.json()).then(statesData => {
 	};
 
 	info.update = function (props) {
-        const status = "";
+        const value = "";
 		this._div.innerHTML = '<h4>US State Emissions</h4>' + 
-       // '<select> <option value="emissions">Emissions</option></select>' + '</b><br />'  + 
-         (props ?
-			'<b>' + props.name + '</b><br />' + props.emissions + " Million Metric Tons (CO2e)"
-			: 'Hover over a state');
+        '<select id = "ddm"> <option value="emissions">Emissions</option> <option value="emissionspercapita">Emissions per Capita</option></select>'
+        this._div.innerHTML += '</b><br />' + (props ? '<b>' + props.name + '</b><br />' + props.emissions + " Million Metric Tons (CO2e)"
+        : 'Hover over a state');
+       //console.log(value);
 	};
 
     info.addTo(map);
+
+        // function status(value) {
+        //     console.log(value);
+        // }
+
+        // status();
 
         // get color depending on state emission values
         function getColor(e) {
@@ -158,9 +168,5 @@ fetch("./data.json").then(response => response.json()).then(statesData => {
 });
 
 </script>
-
-<div style="z-index:10; bottom: 0; left: 0; background-color: white;border: 1px solid black; width: 100%; line-height: 12px; padding: 12px; position: fixed; text-align: left; opacity: 0.89;">
-    <a href="./../index.html">ChloeCrozier.com</a>
-</div>
 </body>
 </html>
