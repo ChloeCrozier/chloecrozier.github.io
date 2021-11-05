@@ -63,13 +63,13 @@ fetch("./data.json").then(response => response.json()).then(statesData => {
         var status = "";
         jsFunction = function(value) {
             status = value;
+            console.log(status);
         }
 		this._div.innerHTML = '<h4>US State Emissions</h4>' + 
-        '<select id = "ddm" onchange="jsFunction(this.value);"> <option value="emissions">Emissions</option> <option value="emissionspercapita">Emissions per Capita</option></select>'
+        '<select id = "ddm" onchange="jsFunction(this.value);"> <option disabled selected> Select a Layer</option> <option value="emissions">Emissions</option> <option value="emissionspercapita">Emissions per Capita</option></select>'
 
         this._div.innerHTML += '</b><br />' + (props ? '<b>' + props.name + '</b><br />' + props.status + " Million Metric Tons (CO2e)"
         : 'Hover over a state');
-        console.log(status);
 
 	};
 
