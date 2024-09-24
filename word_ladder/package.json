@@ -1,0 +1,26 @@
+{
+  "name": "word_ladder_game",
+  "version": "1.0.0",
+  "description": "A game that allows you to guess the words by definition for a given word ladder",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ChloeCrozier/word_ladder.git"
+  },
+  "author": "Chloe Crozier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChloeCrozier/word_ladder/issues"
+  },
+  "homepage": "https://github.com/ChloeCrozier/word_ladder#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "node-fetch": "^3.3.0",
+    "request-promise": "^4.2.6",
+    "require": "^0.4.4",
+    "requirejs": "^2.3.6"
+  }
+}

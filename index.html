@@ -1,25 +1,105 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Chloe Crozier</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link href="./images/favicon.ico" rel="icon" type="image/ico" />
-  </head>
+<html lang="en">
 
-  <body class="chloe">
-    <div class="box">
-      <h1>About Me</h1>
-      <ul class="list">
-        <li><a href="https://www.linkedin.com/in/chloecrozier">LinkedIn</a></li>
-        <li><a href="https://github.com/ChloeCrozier">GitHub</a></li>
-        <li><a href="./resume.pdf">Resume</a></li>
-      </ul>
-      <h1>Side Projects</h1>
-      <ul class="list">
-        <li><a href="./state-data/index.html">State Carbon Emissions</a></li>
-        <li><a href="./coronavirus/index.html">COVID-19 Dashboard</a></li>
-        <li><a href="./pickaroo/index.html">Pick-A-Roo</a></li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chloe Crozier | Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="./images/favicon.ico" rel="icon" type="image/ico" />
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Chloe Crozier</h1>
+      <ul class="flex space-x-6">
+        <li><a href="https://www.linkedin.com/in/chloecrozier" target="_blank" class="hover:text-gray-300">LinkedIn</a>
+        </li>
+        <li><a href="https://github.com/ChloeCrozier" target="_blank" class="hover:text-gray-300">GitHub</a></li>
+        <li><a href="./resume.pdf" target="_blank" class="hover:text-gray-300">Resume</a></li>
       </ul>
     </div>
-  </body>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-white py-16">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold mb-4">Hi, I'm Chloe Crozier</h1>
+      <p class="text-xl text-gray-600 mb-6">A passionate developer with a focus on cloud engineering, AI, and
+        high-performance computing (HPC).</p>
+      <a href="#projects" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-400 transition">View My
+        Projects</a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12">Personal Projects</h2>
+
+      <!-- Grid layout for projects -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+          <h3 class="text-2xl font-semibold mb-4">Pick-A-Roo</h3>
+          <p class="text-gray-600 mb-4">A platform to help users pick the best option from a list of items.</p>
+          <a href="./pickaroo/index.html" class="text-blue-500 hover:underline">View Project</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+          <h3 class="text-2xl font-semibold mb-4">Poker Party</h3>
+          <p class="text-gray-600 mb-4">An online multiplayer game built using socket programming.</p>
+          <a href="https://github.com/ChloeCrozier/poker_party" target="_blank"
+            class="text-blue-500 hover:underline">View on GitHub</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+          <h3 class="text-2xl font-semibold mb-4">Pomodoro Timer</h3>
+          <p class="text-gray-600 mb-4">A watchOS and iOS app to help users manage work and break times.</p>
+          <a href="https://github.com/ChloeCrozier/watchOS_pomodoro_timer" target="_blank"
+            class="text-blue-500 hover:underline">View on GitHub</a>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+          <h3 class="text-2xl font-semibold mb-4">PocDoc</h3>
+          <p class="text-gray-600 mb-4">A mobile healthcare application built for Hacklytics 2024.</p>
+          <a href="https://github.com/ChloeCrozier/pocdoc_hacklytics_2024" target="_blank"
+            class="text-blue-500 hover:underline">View on GitHub</a>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+          <h3 class="text-2xl font-semibold mb-4">Embedded Parking Sensor</h3>
+          <p class="text-gray-600 mb-4">An embedded system project that detects parking availability.</p>
+          <a href="https://github.com/ChloeCrozier/parking_sensor" target="_blank"
+            class="text-blue-500 hover:underline">View on GitHub</a>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+          <h3 class="text-2xl font-semibold mb-4">WBB Analytics</h3>
+          <p class="text-gray-600 mb-4">A benchmark metrics tool for Women's College Basketball.</p>
+          <a href="https://github.com/ChloeCrozier/wbb_analytics" target="_blank"
+            class="text-blue-500 hover:underline">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Chloe Crozier</p>
+    </div>
+  </footer>
+
+</body>
+
 </html>
